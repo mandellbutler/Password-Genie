@@ -17,6 +17,7 @@ console.log("Password Length:", passwordLength);
         // and =< 128, console log "great, now how bout special characters?"
         // else "Password must be 8 - 128 characters in length"
 
+<<<<<<< HEAD
 //Prompt for character types:
 prompt("Would you like your password to use lowercase characters?")
 prompt("Would you like your password to use uppercase characters?")
@@ -24,3 +25,36 @@ prompt("Would you like your password to use numbers?")
 prompt("Would you like your password to use special characters, or symbols?")
 
 //prompt symbol
+=======
+//Prompt for character type:
+// and confirm result:
+var lowercaseOptions = confirm("Would you like your password to use lowercase characters?")
+console.log("Use Lowercase?:", lowercaseOptions)
+
+//Prompt for character type and confirm result:
+// and confirm result:
+var uppercaseOptions = confirm("Would you like your password to include uppercase characters?")
+console.log("Use Uppercase?", uppercaseOptions)
+
+//Prompt for character type and confirm result:
+// and confirm result:
+var numberOptions = confirm("Would you like your password to include numbers?")
+console.log("Use Numbers?", numberOptions)
+
+//Prompt for character type and confirm results:
+// and confirm result:
+var symbolOPtions = confirm("Would you like your password to include special characters, or symbols?")
+console.log("Use Symbols?", symbolOPtions);
+
+//Generate random password using data.
+    // Define LOWERCASE letters
+    
+    // // Define UPPERCASE letters
+    // var uppercaseOptions =
+    // // Define choice of numbers
+    // var numberOptions = arrayNumbers 
+    // // Define choice of symbols
+    // var symbolOPtions =
+
+// Display password to user 
+>>>>>>> main

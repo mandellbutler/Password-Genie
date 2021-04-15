@@ -38,13 +38,29 @@ var symbolOPtions = confirm("Would you like your password to include special cha
 console.log("Use Symbols?", symbolOPtions);
 
 //Generate random password using data.
-    // Define LOWERCASE letters
-    
+    // // Define LOWERCASE letters
+    // var lowergitcaseOptions =
     // // Define UPPERCASE letters
     // var uppercaseOptions =
     // // Define choice of numbers
     // var numberOptions = arrayNumbers 
     // // Define choice of symbols
-    // var symbolOPtions =
+    // var symbolOPtions 
 
 // Display password to user 
+
+
+// Assignment Code
+var generateBtn = document.querySelector("#generate");
+
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
+}
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);

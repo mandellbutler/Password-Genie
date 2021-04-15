@@ -8,18 +8,27 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="wrapper">
         <header>
-            <h1>Welcome to Password Genie!</h1>
-            <h2>Generate a Password</h2>
+          <h1>Password Generator</h1>
         </header>
-        <main class="generator">
-            <div class="generator-input">
-                <p>this will be the input, with placeholder "Secure Your Password Wish"</p>
-            </div>
-            <div class="generator-button">
-                <p> "oh, look! a button"</p>             
-            </div>
-        </main>
+        <div class="card">
+          <div class="card-header">
+            <h2>Generate a Password</h2>
+          </div>
+          <div class="card-body">
+            <textarea
+              readonly
+              id="password"
+              placeholder="Your Secure Password"
+              aria-label="Generated Password"
+            ></textarea>
+          </div>
+          <div class="card-footer">
+            <button id="generate" class="btn">Generate Password</button>
+          </div>
+        </div>
+      </div>in>
     <script src=script.js></script>
 </body>
 </html>

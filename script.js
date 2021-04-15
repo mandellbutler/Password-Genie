@@ -17,15 +17,6 @@ console.log("Password Length:", passwordLength);
         // and =< 128, console log "great, now how bout special characters?"
         // else "Password must be 8 - 128 characters in length"
 
-<<<<<<< HEAD
-//Prompt for character types:
-prompt("Would you like your password to use lowercase characters?")
-prompt("Would you like your password to use uppercase characters?")
-prompt("Would you like your password to use numbers?")
-prompt("Would you like your password to use special characters, or symbols?")
-
-//prompt symbol
-=======
 //Prompt for character type:
 // and confirm result:
 var lowercaseOptions = confirm("Would you like your password to use lowercase characters?")
@@ -47,14 +38,29 @@ var symbolOPtions = confirm("Would you like your password to include special cha
 console.log("Use Symbols?", symbolOPtions);
 
 //Generate random password using data.
-    // Define LOWERCASE letters
-    
+    // // Define LOWERCASE letters
+    // var lowergitcaseOptions =
     // // Define UPPERCASE letters
     // var uppercaseOptions =
     // // Define choice of numbers
     // var numberOptions = arrayNumbers 
     // // Define choice of symbols
-    // var symbolOPtions =
+    // var symbolOPtions 
 
 // Display password to user 
->>>>>>> main
+
+
+// Assignment Code
+var generateBtn = document.querySelector("#generate");
+
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
+}
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);

@@ -11,7 +11,7 @@ Ultimately, it allows the user to feel secure, knowing their private information
 <img src="assets/images/screenshot.png" width="400">
 
 
--Upon open the application, the user will be greeted by the Password Genie.
+-Upon opening the application, the user will be greeted by the Password Genie.
 -The greeting will then be followed by a few brief questions to assess the user's password preferences.
 -Once the questions have been answered, the application will generate a unique password, in accordance to the user's preferences.
 -Simply press the "Generate Password" button, and the password will be revealed.

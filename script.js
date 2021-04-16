@@ -4,9 +4,10 @@ alert("Welcome to Password Genie!");
 //give the user a set of instructions, followed by a series of prompts
 alert("In order to generate your password, I will need some information from you:")
 
-// Prompt for desired length of password between 8 and 128 characters.
-// Confirm number 
-// how long do you want the password to be?
+//Prompt for desired length of password between 8 and 128 characters.
+//Confirm number 
+//how long do you want the password to be?
+
 var passwordLength = prompt("For password length, please pick a number from 8 - 128");
 console.log("Password Length:", passwordLength);
  // if passwordLength is < 8 
@@ -35,7 +36,7 @@ console.log("Use Numbers?", numbers)
 var symbols = confirm("Would you like your password to include special characters, or symbols?")
 console.log("Use Symbols?", symbols);
 
-// Generate random password using data.
+//Generate random password using data.
 //     // Define LOWERCASE letters
 //     var lowergitcaseOptions =
 //     // Define UPPERCASE letters
@@ -67,10 +68,7 @@ console.log("Use Symbols?", symbols);
   var specialChoices = ["`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", ";", ":", "'", '"', ",", "<", ".", ">", "/", "?"]
   
   // numbers
-  var numberChoices = ["8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "70", "71", "72", "73", "74", "75", "76", "77", "78", "79", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "90",  "91", "92", "93", "94", "95", "96", "97", "98", "99", "100",
-  "101", "102", "103", "104", "105", "106", "107", "108", "109", "110",
-  "111", "112", "113", "114", "115", "116", "117", "118", "119", "120",
-  "121", "122", "123", "124", "125", "126", "127", "128"]
+  var numberChoices = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 
   
 // Functions =========================================================
@@ -78,13 +76,24 @@ console.log("Use Symbols?", symbols);
 
 
 function getUseInput () {
-    useInput = prompt("For password length, please pick a number from 8 - 128")
-    
+    useInput = prompt("For password length, please pick a number from 8 - 128");
+    return
 }
+function validateUseInput () {
+    if (useInput < 8) {
+        alert("Password must be 8 - 128 characters in length.")
+    } else if (useInput > 128) {
+        alert("Password must be 8 - 128 characters in length.")
+        getUseInput
+    }    
+}
+
 console.log(getUseInput)
 
 function generatePassword() {
-    return "a string"
+    var allChoices = numberChoices.concat(specialChoices).concat(lowercaseChoices).concat(uppercaseChoices)
+    console.log(allChoices)
+    return pickRandomItem(allChoices)
 
 
    
@@ -111,6 +120,10 @@ function writePassword() {
   
     passwordText.value = password;
   
+  }
+
+  function pickRandomItem(items) {
+    return items[Math.floor(Math.random() * items.length)];
   }
   
   // Add event listener to generate button

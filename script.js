@@ -56,7 +56,9 @@ console.log("Use Symbols?", symbols);
 //============================================BEN'S EXAMPLE===========
 
 // Starting Data =====================================================
-//generate array of options using ASII Character code Table
+
+
+//These are the OPTIONS that the user has to choose from. I Should preobably cosider changing the titles to inlcude the word OPTION for clarity
   // lowercase letters
   var lowercaseChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
  
@@ -94,9 +96,20 @@ function generatePassword() {
     var allChoices = numberChoices.concat(specialChoices).concat(lowercaseChoices).concat(uppercaseChoices)
     console.log(allChoices)
     return pickRandomItem(allChoices)
+}
+
+//condotionals to store user picks
+
+ //if 
 
 
-   
+
+
+
+
+
+
+
 
 
         // store their choice
@@ -109,7 +122,7 @@ function generatePassword() {
     
     // randomly choose characters from the combined array and add them to a string called password
     // return a password
-  }
+
   // Assignment Code
 var generateBtn = document.querySelector("#generate");
 

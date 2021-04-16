@@ -1,14 +1,43 @@
-//User presses button
-// Welcome the User 
-alert("Welcome to Password Genie!");
-//give the user a set of instructions, followed by a series of prompts:
-alert("In order to generate your password, I will need some information from you:")
 
-//Prompt for desired length of password between 8 and 128 characters.
+//==========================DEPENDENCIES===================================
+
+// Assignment Code
+var generateBtn = document.querySelector("#generate");
+var passwordText = document.querySelector("#password");
+ 
+
+
+//======================STARTING DATA=====================================
+
+var lowercaseChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+var uppercaseChoices = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+var specialChoices = ["`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", ";", ":", "'", '"', ",", "<", ".", ">", "/", "?"]
+var numberChoices = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "1"]
+
+
+
+//========================FUNCTIONS=======================================
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
+// Write password to the #password input
+function writePassword() {
+  passwordText.value = generatePassword();
+}
+
 //Confirm number 
 //how long do you want the password to be?
 
-var passwordLength = prompt("For password length, please pick a number from 8 - 128");
+
+//========================USER INTERACTIONS==============================
+//User presses button
+//Prompt for desired length of password between 8 and 128 characters.
+
+function generatePassword() {
+  var passwordLength = parseInt(prompt("For password length, please pick a number from 8 - 128"));
+
+var passwordLength = 
 console.log("Password Length:", passwordLength);
 // if passwordLength is < 8 
 //-OR-
@@ -58,17 +87,7 @@ console.log("Use Symbols?", symbols);
 // Starting Data =====================================================
 //generate array of options using ASII Character code Table
 // lowercase letters
-var lowercaseChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
-// uppercase letters
-var uppercaseChoices = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-
-
-// special characters
-var specialChoices = ["`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", ";", ":", "'", '"', ",", "<", ".", ">", "/", "?"]
-
-// numbers
-var numberChoices = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
 
 
 // Functions =========================================================
@@ -88,15 +107,13 @@ function validateUseInput() {
   }
 }
 
-console.log(getUseInput)
-
-function generatePassword() {
-  var allChoices = numberChoices.concat(specialChoices).concat(lowercaseChoices).concat(uppercaseChoices)
-  console.log(allChoices)
-  return pickRandomItem(allChoices)
 
 
 
+
+function pickRandomItem(items) {
+  return items[Math.floor(Math.random() * items.length)];
+}
 
 
   // store their choice
@@ -110,21 +127,10 @@ function generatePassword() {
   // randomly choose characters from the combined array and add them to a string called password
   // return a password
 }
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
 
-}
 
-function pickRandomItem(items) {
-  return items[Math.floor(Math.random() * items.length)];
-}
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+
+
